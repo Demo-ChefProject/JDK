@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #cd ~/home/jenkins/workspace/Chef-apache/
-cd C:\Jenkins\workspace\Chef-Jdk
+cd C:/Users/krithi.gananasekaran/workspace/Chef-Jdk
 
 #for jdk
 #sudo knife role from file /home/jenkins/workspace/Chef-apache/roles/apache.rb
