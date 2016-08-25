@@ -9,7 +9,7 @@ windows_package 'jdk-64bit-7.101.exe' do
   checksum :SHA256
   installer_type :exe
   action  :install
-  source :C:\Program Files
+  source 'C:\Program Files'
 end
 
 =begin
