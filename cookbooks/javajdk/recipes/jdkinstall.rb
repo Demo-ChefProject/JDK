@@ -4,7 +4,7 @@ end
 
 #Test
 #Use of Windows_package for managing MSI packages
-windows_package  'jdk-64bit-7.101.exe' do
+windows_package  'jdk-64bit-7.101.exe' do #usually a .msi file is passed
   checksum       :SHA256
   installer_type :exe
   source         'C:\Program Files'
