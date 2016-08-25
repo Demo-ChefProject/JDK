@@ -3,7 +3,13 @@ remote_file 'D:\Program Files' do
 end
 
 #Use of Windows_package for managing MSI packages
-windows_package 'MSI Install'
+#windows_package 'MSI Install for Jdk'
+
+powershell_script 'MSI install' do
+  #Syntax
+  #Start-Process <path>\filename.msi
+    Start-Process com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe.msi
+end
 
 #Testing
 #JAVA-HOME = // logic to get JAVA-HOME
