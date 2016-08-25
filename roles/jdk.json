@@ -1,6 +1,6 @@
 {
-	"name": "apache",
-	"description": "This role installs and configures apache httpd",
+	"name": "jdk",
+	"description": "This role installs and configures jdk,jre",
 	"run_list": [
 		"recipe[Jdk::jdkinstall]"
 		]

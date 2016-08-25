@@ -12,7 +12,7 @@ end
 #file 'JAVA\JDK\BIN' do
 #  content "JAVA-HOME=#{fqdn}"
 #end
-
+path = C:\ProgramFiles\Java\jdk1.7.0
 #Followed link https://docs.chef.io/templates.html
 #Testing using template for variable JAVA-HOME
 template 'JAVA\JDK\BIN' do
