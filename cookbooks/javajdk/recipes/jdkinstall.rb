@@ -17,7 +17,7 @@ powershell_script 'MSI install' do
   #Start-Process <path>\filename.msi
     Start-Process C:\Users\krithi.gnanasekaran\Downloads\
     msiexec /i "c:\package.msi" #Syntax Works :)
-=end
+
 
 end
 #Testing
@@ -33,3 +33,4 @@ template 'JAVA\JDK\BIN' do
   variables  JAVA-HOME
   action :create
 end
+=end
