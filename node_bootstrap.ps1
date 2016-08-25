@@ -15,7 +15,7 @@ knife role from file C:\Jenkins\workspace\Chef-Jdk\roles\jdk.json
 knife upload cookbooks Jdk
 
 # Bootstrap a node to its chef server
-# knife bootstrap windows winrm 54.175.57.21 --winrm-user Administrator --winrm-password 'd*G%tc9"&"HLK' --node-name Rigil_node_Windows -r 'role[apache]' -y
+ knife bootstrap windows winrm 54.175.57.21 --winrm-user Administrator --winrm-password 'd*G%tc9"&"HLK' --node-name Rigil_node_Windows -r 'role[jdkinstall]' -y
 
 #Passing credentials stored as a secure string
 $Pass = cat C:\securestring.txt | convertto-securestring
