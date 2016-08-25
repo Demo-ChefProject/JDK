@@ -2,6 +2,6 @@
 	"name": "jdk",
 	"description": "This role installs and configures jdk,jre",
 	"run_list": [
-		"recipe[Jdk::jdkinstall]"
+		"recipe[javajdk::jdkinstall]"
 		]
 }

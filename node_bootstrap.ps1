@@ -2,7 +2,7 @@
 
 #cd ~/home/jenkins/workspace/Chef-apache/
 #cd C:/Users/krithi.gananasekaran/workspace/Chef-Jdk
-cd C:\Jenkins\workspace\Chef-Jdk
+cd C:\Jenkins\workspace\Chef-Jdk\
 
 #for jdk
 #sudo knife role from file /home/jenkins/workspace/Chef-apache/roles/apache.rb
@@ -11,7 +11,7 @@ knife role from file C:\Jenkins\workspace\Chef-Jdk\roles\jdk.json
 
 
 # Upload cookbooks into Chef Server
-knife upload cookbooks Jdk
+knife upload cookbooks javajdk
 
 
 # Bootstrap a node to its chef server
