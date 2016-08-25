@@ -6,7 +6,10 @@ end
 #Use of Windows_package for managing MSI packages
 #windows_package 'MSI Install for Jdk'
 windows_package 'jdk-64bit-7.101.exe' do
+  checksum :SHA256
+  installer_type :exe
   action  :install
+  source :C:\Program Files
 end
 
 =begin
