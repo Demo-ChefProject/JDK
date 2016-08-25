@@ -4,12 +4,11 @@ end
 
 #Test
 #Use of Windows_package for managing MSI packages
-#windows_package 'MSI Install for Jdk'
-windows_package 'jdk-64bit-7.101.exe' do
-  checksum :SHA256
+windows_package  'jdk-64bit-7.101.exe' do
+  checksum       :SHA256
   installer_type :exe
-  action  :install
-  source 'C:\Program Files'
+  source         'C:\Program Files'
+  action         :install
 end
 
 =begin
@@ -18,6 +17,7 @@ powershell_script 'MSI install' do
   #Start-Process <path>\filename.msi
     Start-Process C:\Users\krithi.gnanasekaran\Downloads\
     msiexec /i "c:\package.msi" #Syntax Works :)
+=end
 
 end
 #Testing
@@ -33,4 +33,3 @@ template 'JAVA\JDK\BIN' do
   variables  JAVA-HOME
   action :create
 end
-=end
