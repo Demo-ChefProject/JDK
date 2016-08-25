@@ -8,7 +8,9 @@ end
 powershell_script 'MSI install' do
   #Syntax
   #Start-Process <path>\filename.msi
-    Start-Process com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe.msi
+    Start-Process C:\Users\krithi.gnanasekaran\Downloads\
+    msiexec /i "c:\package.msi" #Syntax Works :)
+
 end
 
 #Testing
