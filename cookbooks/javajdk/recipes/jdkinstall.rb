@@ -13,6 +13,11 @@ windows_package 'Java jdk-64bit-7.101 install' do
   })
 end
 
+#Set path
+powershell_script 'Set JAVA_HOME path' do
+ setx JAVA_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101" /M
+end
+
 
 =begin
 powershell_script 'MSI install' do
