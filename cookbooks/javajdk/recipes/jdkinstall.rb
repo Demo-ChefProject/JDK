@@ -1,8 +1,8 @@
 
-remote_file 'C:\Program Files\Java\jdk-64bit-7.101.exe' do
-  source 'http://54.175.158.124:8081/repository/Rigil/jdk-64bit-7.101.exe'
-  action :create
-end
+#remote_file 'C:\Program Files\Java\jdk-64bit-7.101.exe' do
+#  source 'http://54.175.158.124:8081/repository/Rigil/jdk-64bit-7.101.exe'
+#  action :create
+#end
 
 
 windows_package 'Java jdk-64bit-7.101 install' do
