@@ -1,9 +1,9 @@
 remote_file '/Program Files/Java/jdk-64bit-7.101.exe ' do
   source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
-  mode '0755'
-  owner 'jdkinstall'
-  group 'jdkinstall'
-  action :create
+  #mode '0755'
+  #owner 'jdkinstall'
+  #group 'jdkinstall'
+  #action :create
 end
 
 #Test
