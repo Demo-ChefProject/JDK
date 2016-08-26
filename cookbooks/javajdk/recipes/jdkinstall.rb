@@ -1,12 +1,12 @@
 
 remote_file 'C:\Program Files\Java\jdk-64bit-7.101.exe' do
-  source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
+  source 'http://54.175.158.124:8081/repository/Rigil/jdk-64bit-7.101.exe'
   action :create
 end
 
 
 windows_package 'Java jdk-64bit-7.101 install' do
-  source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
+  source 'http://54.175.158.124:8081/repository/Rigil/jdk-64bit-7.101.exe'
   remote_file_attributes ({
     :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
   })
