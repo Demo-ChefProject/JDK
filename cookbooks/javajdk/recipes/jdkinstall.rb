@@ -1,5 +1,6 @@
 remote_file '/Program Files/Java/jdk-64bit-7.101.exe ' do
-  source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
+  #source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
+ source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/org/apache/apache-httpd-32/2.2.32/apache-httpd-32-2.2.32.zip'
   mode '0755'
   owner 'jdkinstall'
   group 'jdkinstall'
