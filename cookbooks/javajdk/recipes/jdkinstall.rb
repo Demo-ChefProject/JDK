@@ -1,4 +1,3 @@
-=begin
 #Downloads the jdk file
 remote_file 'C:\Program Files\Java\jdk-64bit-7.101.exe' do
   source 'http://54.175.158.124:8081/repository/Rigil/jdk-64bit-7.101.exe'
@@ -22,7 +21,8 @@ powershell_script 'Set JAVA_HOME, JRE_HOME path' do
     setx JRE_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101\jre" /M
   EOH
 end
-=end
+
+=begin
 #Trying with variables
 jdk_install_loc = node['nc4']['jdk']['install_location']
 jdk_package_name = node['nc4']['jdk']['package']
@@ -51,3 +51,4 @@ powershell_script 'Set JAVA_HOME, JRE_HOME path' do
     setx JRE_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101\jre" /M
   EOH
 end
+=end
