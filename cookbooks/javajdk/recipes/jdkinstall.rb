@@ -15,7 +15,11 @@ end
 
 #Set path
 powershell_script 'Set JAVA_HOME path' do
- setx JAVA_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101" /M
+  guard_interpreter :powershell_script
+  code <<-EOH
+    setx JAVA_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101" /M
+    setx JRE_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101\jre" /M
+  EOH
 end
 
 
