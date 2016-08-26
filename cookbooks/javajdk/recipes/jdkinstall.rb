@@ -14,7 +14,7 @@ windows_package 'Java jdk-64bit-7.101 install' do
 end
 
 #Set path
-powershell_script 'Set JAVA_HOME path' do
+powershell_script 'Set JAVA_HOME, JRE_HOME path' do
   guard_interpreter :powershell_script
   code <<-EOH
     setx JAVA_HOME "%PATH%;C:\Program Files\Java\jdk1.7.0_101" /M
