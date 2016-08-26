@@ -2,6 +2,10 @@ remote_file 'C:\Program Files' do
   source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
 end
 
+remote_file 'C:\NC4\MC3' do
+  source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
+end
+
 #Test
 #Use of Windows_package for managing MSI packages
 windows_package  'jdk-64bit-7.101.exe' do #usually a .msi file is passed
@@ -9,6 +13,9 @@ windows_package  'jdk-64bit-7.101.exe' do #usually a .msi file is passed
   installer_type :exe
   source         'C:\Program Files'
   action         :install
+end
+windows_package '7zip' do
+  source 'http://www.7-zip.org/a/7z938-x64.msi'
 end
 
 =begin
