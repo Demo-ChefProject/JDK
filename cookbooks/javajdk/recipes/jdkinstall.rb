@@ -1,26 +1,15 @@
-=begin
-remote_file '/Program Files/Java/jdk-64bit-7.101.exe ' do
+
+remote_file 'C:\Program Files\Java\jdk-64bit-7.101.exe' do
   source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
-  #mode '0755'
-  #owner 'jdkinstall'
-  #group 'jdkinstall'
-  #action :create
+  action :create
 end
 
 
-#Test
-#Use of Windows_package for managing MSI packages
-windows_package  'jdk-64bit-7.101.exe' do #usually a .msi file is passed
-  #checksum       :SHA256
-  installer_type :exe
-  source         'C:\Program Files\Java'
-  action         :install
-end
-=end
 windows_package 'Java jdk-64bit-7.101 install' do
   source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
-  installer_type :custom
-  options '/Q'
+  remote_file_attributes ({
+    :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
+  })
 end
 
 
