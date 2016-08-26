@@ -23,7 +23,7 @@ powershell_script 'MSI install' do
   #Syntax
   #Start-Process <path>\filename.msi
     Start-Process C:\Users\krithi.gnanasekaran\Downloads\
-    msiexec /i "c:\package.msi" #Syntax Works :)
+    msiexec /i "c:\package.msi" #Syntax Works:)
 
 
 end
