@@ -1,11 +1,5 @@
 remote_file 'C:\Program Files\jdk-64bit-7.101.exe' do
   source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
-  action :create
-end
-
-remote_file 'C:\NC4\MC3' do
-  source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/com/oracle/jdk-64bit/7.101/jdk-64bit-7.101.exe'
-  action :create
 end
 
 #Test
@@ -16,9 +10,7 @@ windows_package  'jdk-64bit-7.101.exe' do #usually a .msi file is passed
   source         'C:\Program Files'
   action         :install
 end
-windows_package '7zip' do
-  source 'http://www.7-zip.org/a/7z938-x64.msi'
-end
+
 
 =begin
 powershell_script 'MSI install' do
