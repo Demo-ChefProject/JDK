@@ -30,8 +30,8 @@ end
 powershell_script 'Set JAVA_HOME, JRE_HOME path' do
   guard_interpreter :powershell_script
   code <<-EOH
-    setx JAVA_HOME "#{jdk_install_loc}\jdk1.7.0_101" /M
-    setx JRE_HOME "#{jdk_install_loc}\jdk1.7.0_101\jre" /M
+    setx JAVA_HOME "#{jdk_install_loc}\\jdk1.7.0_101" /M
+    setx JRE_HOME "#{jdk_install_loc}\\jdk1.7.0_101\\jre" /M
   EOH
 end
 
