@@ -36,7 +36,7 @@ Just include `javajdk` in your node's `run_list`:
 
 ## What does this cookbook do?
 
-1. Copy Jdk file to target node from Nexus repo and automatically install jdk
+## Copy Jdk file to target node from Nexus repo and automatically install jdk
  - windows_package used for this purpose
  
 What it DOES??
@@ -67,7 +67,7 @@ checksum, installer_type, options, package_name, provider, remote_file_attribute
 
  - Only Development in Jdk is enabled (disabling others)
 
- 2. Setting the Variable Name and Value
+## Setting the Variable Name and Value
 
  - SETX in Powershell script is used for this purpose
  - 
