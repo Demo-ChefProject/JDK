@@ -74,7 +74,7 @@ checksum, installer_type, options, package_name, provider, remote_file_attribute
 What it DOES?
 Set environment variables permanently, SETX can be used to set Environment Variables for the machine or currently logged on user:
 
-Syntax
+SYNTAX of SETX
 
    SETX [/s Computer [Credentials]] Variable Value [/m]
 
