@@ -22,7 +22,7 @@ jdk_inst_folder_name = "#{jdk_install_loc}\\#{node['nc4']['jdk_folder_name']}"
 windows_package 'Java jdk install' do
   source jdk_download_from
   installer_type :custom
-  options "INSTALLDIR=#{jdk_inst_folder_name}"
+  options "/qn INSTALLDIR=#{jdk_inst_folder_name}"
 #  options "INSTALLDIR=C:\\Java\\Java-JDK-Test"
   #  remote_file_attributes ({
 #    :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
