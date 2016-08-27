@@ -1,8 +1,7 @@
 jdk_download_from = "#{node['nc4']['nexus']['url']}/#{node['nc4']['jdk']['version']}/#{node['nc4']['jdk']['package']}"
 jdk_install_loc = node['nc4']['jdk']['install_location']
 jdk_package_name = node['nc4']['jdk']['package']
-
-jdk_install_path = node['nc4']['jdk_install_path']
+jdk_install_folder = node['nc4']['jdk_install_folder']
 
 #Check if install location exists
 #powershell_script 'Create Install Location' do
@@ -23,7 +22,7 @@ jdk_install_path = node['nc4']['jdk_install_path']
 windows_package 'Java jdk install' do
   source jdk_download_from
   installer_type :custom
-  options "INSTALLDIR=#{jdk_install_path}"
+  options "INSTALLDIR=#{jdk_install_loc}\\#{jdk_install_folder}"
 #  remote_file_attributes ({
 #    :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
 #  })
@@ -37,8 +36,8 @@ powershell_script 'Set JAVA_HOME, JRE_HOME path' do
 #    $inst_location = $inst_location -replace ".exe", ""
 #    setx JAVA_HOME $inst_location /M
 #    setx JRE_HOME $inst_location\\jre /M
-    setx JAVA_HOME "#{jdk_install_path}" /M
-    setx JRE_HOME "#{jdk_install_path}\\jre" /M
+    setx JAVA_HOME "#{jdk_install_loc}\\#{jdk_install_folder}" /M
+    setx JRE_HOME "#{jdk_install_loc}\\#{jdk_install_folder}\\jre" /M
   EOH
 end
 

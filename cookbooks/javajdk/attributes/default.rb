@@ -8,4 +8,4 @@ default['nc4']['jdk']['package']="jdk-64bit-7.101.exe"
 default['nc4']['jdk']['install_location']="C:\\Program Files\\Java"
 
 #Set Jdk install path.. Value can be set from Jenkins
-default['nc4']['jdk_install_path'] = File.exist?("jdk_install_path.txt") ? File.read("jdk_install_path.txt") : "jdk"
+default['nc4']['jdk_install_folder'] = File.exist?("jdk_install_path.txt") ? File.read("jdk_install_path.txt") : "jdk"
