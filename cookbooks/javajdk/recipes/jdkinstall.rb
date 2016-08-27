@@ -3,19 +3,19 @@ jdk_package_name = node['nc4']['jdk']['package']
 jdk_install_loc = node['nc4']['jdk']['install_location']
 
 #Check if install location exists
-powershell_script 'Create Install Location' do
-  guard_interpreter :powershell_script
-  code <<-EOH
-    New-Item -ItemType Directory -Path #{jdk_install_loc}
-  EOH
-  not_if do Dir.exist?("#{jdk_install_loc}") end
-end
+#powershell_script 'Create Install Location' do
+#  guard_interpreter :powershell_script
+#  code <<-EOH
+#    New-Item -ItemType Directory -Path #{jdk_install_loc}
+#  EOH
+#  not_if do Dir.exist?("#{jdk_install_loc}") end
+#end
 
 #Downloads the jdk file
-remote_file "#{jdk_install_loc}/#{jdk_package_name}" do
-  source jdk_download_from
-  action :create
-end
+#remote_file "#{jdk_install_loc}/#{jdk_package_name}" do
+#  source jdk_download_from
+#  action :create
+#end
 
 #Installs jdk
 windows_package 'Java jdk install' do
@@ -30,8 +30,8 @@ end
 powershell_script 'Set JAVA_HOME, JRE_HOME path' do
   guard_interpreter :powershell_script
   code <<-EOH
-    setx JAVA_HOME "#{jdk_install_loc}\\jdk1.7.0_101" /M
-    setx JRE_HOME "#{jdk_install_loc}\\jdk1.7.0_101\\jre" /M
+    setx JAVA_HOME "#{jdk_install_loc}\jdk1.7.0_101" /M
+    setx JRE_HOME "#{jdk_install_loc}\jdk1.7.0_101\jre" /M
   EOH
 end
 
