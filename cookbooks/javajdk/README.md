@@ -40,7 +40,7 @@ Just include `javajdk` in your node's `run_list`:
  - windows_package used for this purpose
  
 What it DOES??
-A windows_package resource block manages a package on a node, typically by installing it.
+- A windows_package resource block manages a package on a node, typically by installing it.
  
 SYNTAX of windows_package
 
@@ -72,7 +72,7 @@ checksum, installer_type, options, package_name, provider, remote_file_attribute
  - SETX in Powershell script is used for this purpose
  - 
 What it DOES?
-Set environment variables permanently, SETX can be used to set Environment Variables for the machine or currently logged on user:
+- Set environment variables permanently, SETX can be used to set Environment Variables for the machine or currently logged on user:
 
 SYNTAX of SETX
 
