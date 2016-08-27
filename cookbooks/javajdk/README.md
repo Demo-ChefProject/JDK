@@ -36,14 +36,22 @@ Just include `javajdk` in your node's `run_list`:
 
 ## What does this cookbook do?
 
-## Copy Jdk file to target node from Nexus repo and automatically install jdk
- - windows_package used for this purpose
- 
-What it DOES??
-- A windows_package resource block manages a package on a node, typically by installing it.
- 
-SYNTAX of windows_package
+```
+ - Install Jdk to target node from Nexus repo		 
+ - Only Development is enabled 
+ - Create variable Name and Value for both Java and Jre
+```
 
+## On a more detail oriented scenario about how the code works (with the packages used and on the coding front)
+
+## To copy Jdk file to target node from Nexus repo and to automatically install jdk
+ `windows_package` used for this purpose
+ 
+## What it DOES??
+ A windows_package resource block manages a package on a node, typically by installing it.
+ 
+- SYNTAX of windows_package
+```
 windows_package 'name' do
   checksum                   String
   installer_type             Symbol
@@ -64,18 +72,18 @@ windows_package tells the chef-client to manage a package
 'name' is the name of the package
 :action identifies which steps the chef-client will take to bring the node into the desired state
 checksum, installer_type, options, package_name, provider, remote_file_attributes, returns, source, and timeout are properties of this resource, with the Ruby type shown. 
-
+```
  - Only Development in Jdk is enabled (disabling others)
 
 ## Setting the Variable Name and Value
 
- - SETX in Powershell script is used for this purpose
+ - `SETX` in Powershell script is used for this purpose
  
-What it DOES?
-- Set environment variables permanently, SETX can be used to set Environment Variables for the machine or currently logged on user:
+## What it DOES?
+ Set environment variables permanently, `SETX` can be used to set Environment Variables for the machine or currently logged on user:
 
-SYNTAX of SETX
-
+- SYNTAX of SETX
+```
    SETX [/s Computer [Credentials]] Variable Value [/m]
 
    SETX [/s Computer [Credentials]] [Variable] /k RegistryPath [/m]
@@ -83,7 +91,7 @@ SYNTAX of SETX
    SETX [/s Computer [Credentials]] /f FileName {[Variable] {/a L,T | /r oL,oT "SearchString"}
         [/m] | /x} [/d Delimiters]
 
-
+```
 Links to refer/learn more on the coding front:
 
  - https://docs.chef.io/resource_windows_package.html#actions
