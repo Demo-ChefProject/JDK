@@ -1,6 +1,6 @@
 jdk_download_from = "#{node['nc4']['nexus']['url']}/#{node['nc4']['jdk']['version']}/#{node['nc4']['jdk']['package']}"
-jdk_package_name = node['nc4']['jdk']['package']
 jdk_install_loc = node['nc4']['jdk']['install_location']
+jdk_package_name = node['nc4']['jdk']['package']
 
 #Check if install location exists
 #powershell_script 'Create Install Location' do
@@ -30,8 +30,12 @@ end
 powershell_script 'Set JAVA_HOME, JRE_HOME path' do
   guard_interpreter :powershell_script
   code <<-EOH
-    setx JAVA_HOME "#{jdk_install_loc}\\jdk1.7.0_101" /M
-    setx JRE_HOME "#{jdk_install_loc}\\jdk1.7.0_101\\jre" /M
+    $inst_location = "#{jdk_install_loc}\\#{jdk_package_name}"
+    $inst_location = $inst_location -replace ".exe", ""
+    setx JAVA_HOME $inst_location /M
+    setx JRE_HOME $inst_location\\jre /M
+#    setx JAVA_HOME "#{jdk_install_loc}\\jdk1.7.0_101" /M
+#    setx JRE_HOME "#{jdk_install_loc}\\jdk1.7.0_101\\jre" /M
   EOH
 end
 
