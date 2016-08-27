@@ -21,9 +21,9 @@ jdk_install_loc = node['nc4']['jdk']['install_location']
 windows_package 'Java jdk install' do
   source jdk_download_from
   installer_type :custom
-  remote_file_attributes ({
-    :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
-  })
+#  remote_file_attributes ({
+#    :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
+#  })
 end
 
 #Set path variables for Java
