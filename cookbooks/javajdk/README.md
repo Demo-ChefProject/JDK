@@ -34,19 +34,33 @@ Just include `javajdk` in your node's `run_list`:
 }
 ```
 
-## Contributing
+## What does this cookbook do?
 
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+1. Copy Jdk file to target node from Nexus repo and automatically install jdk
+ - windows_package used for this purpose
+ 
+What it DOES??
+A windows_package resource block manages a package on a node, typically by installing it.
+ 
+SYNTAX of windows_package
 
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+windows_package 'name' do
+  checksum                   String
+  installer_type             Symbol
+  notifies                   # see description
+  options                    String
+  provider                   Chef::Provider::Package::Windows
+  remote_file_attributes     Hash
+  returns                    String, Integer, Array
+  source                     String # defaults to 'name' if not specified
+  subscribes                 # see description
+  timeout                    String, Integer
+  action                     Symbol # defaults to :install if not specified
+end
 
-## License and Authors
+ - Only Development in Jdk is enabled (disabling others)
 
-Authors: TODO: List authors
+2. Setting the Variable Name and Value
+
+ - Powershell script is used for this purpose
 
