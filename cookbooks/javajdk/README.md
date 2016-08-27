@@ -1,6 +1,6 @@
 # javajdk Cookbook
 
-TODO: Enter the cookbook description here.
+This cookbook installs and configures jdk for Mission Center project.
 
 e.g.
 This cookbook makes your favorite breakfast sandwich.
