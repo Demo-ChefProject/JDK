@@ -25,7 +25,7 @@ windows_package 'Java jdk install' do
   options "/qn /passive INSTALLDIR=\"#{jdk_inst_folder_name}\""
   
   #Testing for checksum
-  shasum256 = jdk_inst_folder_name
+  checksum shasum256 jdk_inst_folder_name
   
 #  options "INSTALLDIR=C:\\Java\\Java-JDK-Test"
   #  remote_file_attributes ({
