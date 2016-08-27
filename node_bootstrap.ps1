@@ -27,8 +27,8 @@ $Session = New-PSSession -ComputerName 54.175.57.21 -Credential $Pegacred
 echo $env:Install_Folder_Name
 
 $Script = {powershell.exe chef-client}
-$Job = Invoke-Command -Session $Session -Scriptblock $Script
-echo $Job
+#$Job = Invoke-Command -Session $Session -Scriptblock $Script
+#echo $Job
 #Script which runs the ruby script in the remote server
 
 
