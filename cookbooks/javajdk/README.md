@@ -85,5 +85,6 @@ Syntax
 
 
 Links to refer/learn more on the coding front:
+
 https://docs.chef.io/resource_windows_package.html#actions
 http://ss64.com/nt/setx.html
