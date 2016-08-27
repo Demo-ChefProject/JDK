@@ -24,9 +24,6 @@ windows_package 'Java jdk install' do
   installer_type :custom
   options "/qn /passive INSTALLDIR=\"#{jdk_inst_folder_name}\""
   
-  #Testing for checksum
-  checksum shasum256 jdk_inst_folder_name
-  
 #  options "INSTALLDIR=C:\\Java\\Java-JDK-Test"
   #  remote_file_attributes ({
 #    :path => 'C:\Program Files\Java\jdk-64bit-7.101.exe'
