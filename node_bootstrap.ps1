@@ -23,7 +23,7 @@ $Pegacred = new-object -TypeName System.Management.Automation.PSCredential -argu
 #  Create a remote session to the chef node
 $Session = New-PSSession -ComputerName 54.175.57.21 -Credential $Pegacred
 
-$Script = {echo $Install_Folder_Name > jdk_install_name.txt & powershell.exe chef-client}
+$Script = {echo $Install_Folder_Name > jdk_install_name.txt ; powershell.exe chef-client}
 
 $Job = Invoke-Command -Session $Session -Scriptblock $Script
 echo $Job
