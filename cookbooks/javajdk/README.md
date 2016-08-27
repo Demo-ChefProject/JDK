@@ -63,14 +63,14 @@ where
 windows_package tells the chef-client to manage a package
 'name' is the name of the package
 :action identifies which steps the chef-client will take to bring the node into the desired state
-checksum, installer_type, options, package_name, provider, remote_file_attributes, returns, source, and timeout are properties of this resource, with the Ruby type shown. See “Properties” section below for more information about all of the properties that may be used with this resource.
+checksum, installer_type, options, package_name, provider, remote_file_attributes, returns, source, and timeout are properties of this resource, with the Ruby type shown. 
 
  - Only Development in Jdk is enabled (disabling others)
 
 ## Setting the Variable Name and Value
 
  - SETX in Powershell script is used for this purpose
- - 
+ 
 What it DOES?
 - Set environment variables permanently, SETX can be used to set Environment Variables for the machine or currently logged on user:
 
