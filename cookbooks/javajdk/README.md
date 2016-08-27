@@ -67,7 +67,7 @@ checksum, installer_type, options, package_name, provider, remote_file_attribute
 
  - Only Development in Jdk is enabled (disabling others)
 
-2. Setting the Variable Name and Value
+ 2. Setting the Variable Name and Value
 
  - SETX in Powershell script is used for this purpose
  - 
