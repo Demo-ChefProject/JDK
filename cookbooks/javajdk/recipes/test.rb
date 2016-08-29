@@ -1,6 +1,6 @@
 
-  #Testing for checksum
- 
+  #Testing for checksum funtionality
+  
   windows_package 'Java install' do
   source 'http://54.175.158.124:8081repository/Rigil/jdk-64bit-7.101.exe'
   installer_type :custom
